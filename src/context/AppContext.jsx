@@ -8,7 +8,7 @@ export function AppContextProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loadingUser, setLoadingUser] = useState(false);
 
-  // Auth session
+  // Auth Session
   const checkSession = async () => {
     try {
       const { data } = await api.get("/api/auth/me");
