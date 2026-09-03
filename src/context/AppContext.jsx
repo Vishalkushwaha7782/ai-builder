@@ -334,7 +334,7 @@ export function AppContextProvider({ children }) {
   // Cancel debounce on unmount
   useEffect(() => {
     return () => {
-      debouncedSave.cancel();
+      debouncedSave.flush();
     };
   }, [debouncedSave]);
 
